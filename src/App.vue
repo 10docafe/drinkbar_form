@@ -4,7 +4,7 @@
     <main class="mt-9">
       <v-row justify="center">
         <v-col cols="9">
-          <h1 class="text-center">10°TAKEOUT</h1>
+          <h1 class="text-center">10°DrinkBar</h1>
           <v-row justify="center">
             <v-col cols="8">
               <h3 class="text-center mt-4">ご使用方法</h3>
@@ -90,10 +90,10 @@ export default Vue.extend({
       try {
         const data = await liff.init({ liffId: "1654260645-M3kxyvpv" });
         //this.initialized = true;
-        this.loggedIn = liff.isLoggedIn();
-        this.inClient = liff.isInClient();
-        if (this.loggedIn === true) console.log("Logged in!!");
-        else console.log("Not logged in!!");
+        // this.loggedIn = liff.isLoggedIn();
+        // this.inClient = liff.isInClient();
+        // if (this.loggedIn === true) console.log("Logged in!!");
+        // else console.log("Not logged in!!");
         this.apiLoading = false;
       } catch (err) {
         throw new Error(err);
