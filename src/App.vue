@@ -88,7 +88,7 @@ export default Vue.extend({
     async initializeLiff(): Promise<void> {
       this.apiLoading = true;
       try {
-        const data = await liff.init({ liffId: "1654260645-M3kxyvpv" });
+        const data = await liff.init({ liffId: "1654570764-zyxPpadK" });
         //this.initialized = true;
         // this.loggedIn = liff.isLoggedIn();
         // this.inClient = liff.isInClient();
