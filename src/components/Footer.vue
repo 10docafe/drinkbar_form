@@ -7,14 +7,10 @@
           <p>03-6912-6109</p>
           <p>10docafe@gmail.com</p>
           <a href="https://twitter.com/10docafe" target="_blank">
-            <v-icon color="#55acee" size="70px" class="twitter"
-              >mdi-twitter</v-icon
-            >
+            <v-icon color="#55acee" size="70px" class="twitter">mdi-twitter</v-icon>
           </a>
           <a href="https://www.instagram.com/10docafe" target="_blank">
-            <v-icon color="#d93177" size="70px" class="instagram"
-              >mdi-instagram</v-icon
-            >
+            <v-icon color="#d93177" size="70px" class="instagram">mdi-instagram</v-icon>
           </a>
           <hr class="socket" />
           <span>&copy;10°CAFE All Rights Reserved.</span>
@@ -34,7 +30,7 @@ export default {};
 }
 
 header {
-  font-family: "Big Shoulders Display", cursive;
+  font-family: "M PLUS 1p";
 }
 
 footer {

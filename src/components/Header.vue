@@ -41,7 +41,7 @@ export default {};
 }
 
 header {
-  font-family: "Big Shoulders Display", cursive;
+  font-family: "M PLUS 1p";
 }
 
 footer {

@@ -161,7 +161,7 @@ export default Vue.extend({
       flexMsg.contents.header.contents[0].text = `ご注文内容(${this.selectedSeat})`;
 
       //値段の表示
-      flexMsg.contents.body.contents[6].contents![2].text = `${data.price}円`;
+      //flexMsg.contents.body.contents[6].contents![2].text = `${data.price}円`;
 
       //ドリンク
       if (data.item.drink.length > 0) {
@@ -173,15 +173,15 @@ export default Vue.extend({
             gravity: "top",
             weight: "regular"
           };
-          flexMsg.contents.body.contents[4].contents?.push(content);
+          flexMsg.contents.body.contents[0].contents?.push(content);
         });
       }
     },
-    sendMessages(data: Msg) {
+    async sendMessages(data: Msg) {
       //JSONに送信データを追加
       this.createMsg(data);
       console.log(flexMsg);
-      liff
+      await liff
         .sendMessages([JSON.parse(JSON.stringify(flexMsg))])
         .then(() => {
           liff.closeWindow();

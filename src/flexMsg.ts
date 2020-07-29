@@ -50,66 +50,10 @@ export const flexMsg = {
           contents: [
             {
               type: "text",
-              text: "メインフード",
-              size: "sm",
-              gravity: "top",
-              weight: "bold",
-            },
-          ],
-        },
-        {
-          type: "separator",
-        },
-        {
-          type: "box",
-          layout: "vertical",
-          contents: [
-            {
-              type: "text",
-              text: "サイドメニュー",
-              size: "sm",
-              weight: "bold",
-              gravity: "top",
-            },
-          ],
-        },
-        {
-          type: "separator",
-        },
-        {
-          type: "box",
-          layout: "vertical",
-          contents: [
-            {
-              type: "text",
               text: "ドリンクメニュー",
               size: "sm",
               weight: "bold",
               gravity: "top",
-            },
-          ],
-        },
-        {
-          type: "separator",
-        },
-        {
-          type: "box",
-          layout: "vertical",
-          contents: [
-            {
-              type: "text",
-              text: "合計",
-              weight: "bold",
-              size: "sm",
-              gravity: "top",
-            },
-            {
-              type: "separator",
-            },
-            {
-              type: "text",
-              text: "800円",
-              size: "sm",
             },
           ],
         },
