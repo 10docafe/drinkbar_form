@@ -10,7 +10,10 @@
         scroll-target="#scrolling-techniques-2"
       >
         <template v-slot:img="{ props }">
-          <v-img v-bind="props" gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"></v-img>
+          <v-img
+            v-bind="props"
+            gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+          ></v-img>
         </template>
 
         <v-toolbar-title>10°CAFE DrinkBar</v-toolbar-title>
@@ -18,7 +21,11 @@
         <v-spacer></v-spacer>
       </v-app-bar>
 
-      <v-sheet id="scrolling-techniques-2" class="overflow-y-auto" max-height="600">
+      <v-sheet
+        id="scrolling-techniques-2"
+        class="overflow-y-auto"
+        max-height="600"
+      >
         <v-container style="height: 130px;"></v-container>
       </v-sheet>
     </v-card>
@@ -52,7 +59,7 @@ footer {
     ),
     url("../assets/cafe.jpg");
   background-size: cover;
-  font-family: "Big Shoulders Display", cursive;
+  /* font-family: "Big Shoulders Display", cursive; */
   background-size: cover;
   color: black;
   padding: 2rem 0 2rem;
@@ -69,14 +76,5 @@ hr.socket {
 
 span {
   font-size: 1.5rem;
-}
-</style>
-
-<style lang="scss">
-* :not(.v-icon) {
-  font-family: "Big Shoulders Display", cursive;
-}
-.v-label .theme--light {
-  font-family: "Big Shoulders Display", cursive !important;
 }
 </style>

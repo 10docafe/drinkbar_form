@@ -222,7 +222,7 @@ th.text-left {
 
 <style lang="scss" scoped>
 h3 {
-  font-family: "Big Shoulders Display", cursive;
+  // font-family: "Big Shoulders Display", cursive;
   border-bottom: solid 3px #cce4ff;
   position: relative;
 }

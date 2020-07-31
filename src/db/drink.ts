@@ -56,6 +56,12 @@ const others = [
   {
     name: "Iレモネード",
   },
+  {
+    name: "Hピーチレモネード",
+  },
+  {
+    name: "Iピーチレモネード",
+  },
 ];
 
 const softdrink = [
@@ -66,7 +72,7 @@ const softdrink = [
 
 const specialty = [
   {
-    name: "クリームソーダ",
+    name: "メロンソーダ",
   },
 ];
 

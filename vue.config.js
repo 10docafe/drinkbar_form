@@ -1,5 +1,7 @@
 module.exports = {
-  transpileDependencies: ["vuetify"],
+  transpileDependencies: ["vuetify"]
+  /*
   publicPath: '/drinkbar_form/',
   outputDir: 'docs'
+  */
 };
