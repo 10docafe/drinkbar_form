@@ -37,6 +37,9 @@ export const flexMsg = {
           weight: "bold",
           color: "#AAAAAA",
         },
+        {
+          type: "separator",
+        },
       ],
     },
     body: {
