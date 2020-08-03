@@ -23,7 +23,11 @@
                   </thead>
                   <tbody>
                     <tr v-for="(drink, index) in drinks" :key="index">
-                      <v-btn @click="deleteItem(index, 'drink')" icon class="pt-3">
+                      <v-btn
+                        @click="deleteItem(index, 'drink')"
+                        icon
+                        class="pt-3"
+                      >
                         <v-icon>mdi-delete</v-icon>
                       </v-btn>
                       <td>{{ drink.name }}</td>
@@ -65,12 +69,20 @@
 
           <v-row v-if="drinks.length > 0" align="center" justify="center">
             <v-col class="d-flex" cols="8" sm="6">
-              <v-select :items="seats" v-model="selectedSeat" outlined label="席番号(ビラに書いてあります)"></v-select>
+              <v-select
+                :items="seats"
+                v-model="selectedSeat"
+                outlined
+                label="席番号(ビラに書いてあります)"
+              ></v-select>
             </v-col>
           </v-row>
 
           <v-card-actions>
-            <v-row justify="center" v-if="drinks.length > 0 && selectedSeat.length > 0">
+            <v-row
+              justify="center"
+              v-if="drinks.length > 0 && selectedSeat.length > 0"
+            >
               <Dialog @doOrder="doOrder"></Dialog>
             </v-row>
           </v-card-actions>
@@ -119,6 +131,16 @@ export default Vue.extend({
       drinkPrice: 0,
       name: "",
       seats: [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
         "A1",
         "A2",
         "A3",
