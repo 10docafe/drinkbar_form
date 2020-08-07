@@ -207,7 +207,9 @@ export default Vue.extend({
       const token = liff.getIDToken();
       const url =
         "https://script.google.com/macros/s/AKfycbwEralJ8lY_5ErR2rkE8e3Q38xH3aI1WH6ASbqXpQkoE_4E9qU/exec";
-      await axios.post(url, { token }).catch(err => console.log(err));
+      await axios
+        .post(url, { token: token, drinks: this.drinks })
+        .catch(err => console.log(err));
     },
     doOrder() {
       // const url = "https://us-central1-takeout-form.cloudfunctions.net/api";
