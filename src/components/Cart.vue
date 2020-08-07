@@ -23,11 +23,7 @@
                   </thead>
                   <tbody>
                     <tr v-for="(drink, index) in drinks" :key="index">
-                      <v-btn
-                        @click="deleteItem(index, 'drink')"
-                        icon
-                        class="pt-3"
-                      >
+                      <v-btn @click="deleteItem(index, 'drink')" icon class="pt-3">
                         <v-icon>mdi-delete</v-icon>
                       </v-btn>
                       <td>{{ drink.name }}</td>
@@ -69,20 +65,12 @@
 
           <v-row v-if="drinks.length > 0" align="center" justify="center">
             <v-col class="d-flex" cols="8" sm="6">
-              <v-select
-                :items="seats"
-                v-model="selectedSeat"
-                outlined
-                label="席番号(ビラに書いてあります)"
-              ></v-select>
+              <v-select :items="seats" v-model="selectedSeat" outlined label="席番号(ビラに書いてあります)"></v-select>
             </v-col>
           </v-row>
 
           <v-card-actions>
-            <v-row
-              justify="center"
-              v-if="drinks.length > 0 && selectedSeat.length > 0"
-            >
+            <v-row justify="center" v-if="drinks.length > 0 && selectedSeat.length > 0">
               <Dialog @doOrder="doOrder"></Dialog>
             </v-row>
           </v-card-actions>
@@ -100,6 +88,7 @@ import Vue, { PropType } from "vue";
 import Dialog from "../components/Dialog.vue";
 import liff from "@line/liff";
 import { flexMsg } from "../flexMsg";
+import axios from "axios";
 
 interface Drink {
   name: string;
@@ -213,6 +202,12 @@ export default Vue.extend({
           this.$emit("err", err);
           console.log("error", err);
         });
+
+      // GASにtokenとかのデータを保存
+      const token = liff.getIDToken();
+      const url =
+        "https://script.google.com/macros/s/AKfycbwEralJ8lY_5ErR2rkE8e3Q38xH3aI1WH6ASbqXpQkoE_4E9qU/exec";
+      await axios.post(url, { token }).catch(err => console.log(err));
     },
     doOrder() {
       // const url = "https://us-central1-takeout-form.cloudfunctions.net/api";
