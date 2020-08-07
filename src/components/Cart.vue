@@ -208,8 +208,9 @@ export default Vue.extend({
       const url =
         "https://script.google.com/macros/s/AKfycbwEralJ8lY_5ErR2rkE8e3Q38xH3aI1WH6ASbqXpQkoE_4E9qU/exec";
       const params = new URLSearchParams();
+      const drinkNames = this.drinks.map(drink => drink.name);
       params.append("token", token!);
-      params.append("drinks", JSON.stringify(this.drinks));
+      params.append("drinks", JSON.stringify(drinkNames));
       await axios.post(url, params).catch(err => console.log(err));
     },
     doOrder() {
